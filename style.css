@@ -1,0 +1,193 @@
+/* 全体の設定 */
+body {
+    margin: 0;
+    font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro";
+    color: #333;
+    background: #fff;
+  }
+  
+  header {
+    /* ヘッダースタイルの詳細をここに追加 */
+  }
+  
+  .banner {
+    width: 100%;
+    height: 400px;
+    padding: 20px 0;
+    background-image: url('image/background.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .logo-container {
+    width: 300px;
+    margin: 0 auto 20px;
+  }
+  
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 2em;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h2 span {
+    font-size: 0.7em;
+    display: block;
+  }
+  
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  
+  .list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .list a {
+    color: #e8e4df;
+  }
+  
+  .list h4 {
+    margin-bottom: 20px;
+    font-size: 1.25em;
+  }
+  
+  .list p {
+    margin-bottom: 20px;
+  }
+  
+  .list figure,
+  .list video {
+    max-width: 45%; /* 画像と動画の最大幅を調整 */
+    margin: 0 
+    2.5%; /* 画像と動画の周りの余白を調整 */
+    align-self: center; /* Flexboxで中央揃えにする */
+  }
+  
+  .list figure img,
+  .list video img {
+    max-width: 100%; /* 画像がfigureの幅に合わせて調整されるようにする */
+    height: auto; /* 画像の縦横比を保持する */
+  }
+  
+  .list .text {
+    width: 45%; /* テキストブロックの幅 */
+    padding: 1em; /* 内側の余白 */
+    text-align: left; /* テキストを左揃えに */
+  }
+  
+  /* 追加のスタイリングが必要な場合はここにコードを挿入 */
+  
+  /* 画像が大きすぎる問題に対応 */
+  @media screen and (max-width: 1024px) {
+    .list figure,
+    .list video {
+      max-width: 35%; /* 画像の最大幅をデスクトップより小さな画面で縮小 */
+    }
+  }
+  
+  /* モバイルビューのスタイリング */
+  @media screen and (max-width: 768px) {
+    .banner {
+      padding: 10px 0; /* モバイルデバイスでのバナーのパディングを減らす */
+    }
+  
+    .logo-container {
+      width: 250px; /* ロゴのサイズをモバイルデバイスで調整 */
+    }
+  
+    .inner {
+      width: 95%; /* コンテナの幅をモバイルデバイスで拡大 */
+    }
+  
+    .list {
+      flex-direction: column; /* スタック表示に変更 */
+      align-items: center; /* 中央揃えに */
+    }
+  
+    .list figure,
+    .list video,
+    .list .text {
+      width: 100%; /* モバイルデバイスでは要素をフル幅にする */
+      margin: 10px 0; /* モバイルデバイスでは上下のマージンを追加 */
+    }
+  
+    .list figure img,
+    .list video img {
+      width: auto; /* モバイルデバイスでは画像を元のサイズに戻す */
+    }
+  }
+  
+  /* タブレットビューのスタイリング */
+  @media screen and (max-width: 600px) {
+    .logo-container {
+      width: 200px; /* タブレットデバイスでのロゴのサイズを調整 */
+    }
+  
+    h1 {
+      font-size: 1.75em; /* タブレットデバイスでのタイトルのフォントサイズを調整 */
+    }
+  }
+  
+  /* 小さいモバイルビューのスタイリング */
+  @media screen and (max-width: 480px) {
+    .logo-container {
+      width: 180px; /* 小さいモバイルデバイスでのロゴのサイズを調整 */
+    }
+  
+    h1 {
+      font-size: 1.5em; /* 小さいモバイルデバイスでのタイトルのフォントサイズを調整 */
+    }
+  
+    #inner h2 span {
+        display: inline-block;white-space: nowrap;
+        font-size: 0.875rem;	/*文字サイズ。冒頭で指定しているフォントサイズの0.875倍です。*/
+        border-top: 3px solid #b69e4b;	/*上の線の幅、線種、色*/
+        padding: 15px 20px 0;	/*上、左右、下への余白*/
+    }
+/* その他のスタイルの調整が必要であればここに追加 */}
+.image-container {
+        display: flex;
+        justify-content: center; /* 水平方向の中央揃え */
+        align-items: center; /* 垂直方向の中央揃え */
+}
+    
+img {
+        max-width: 90%;
+        max-height: 450px;
+}
+    
