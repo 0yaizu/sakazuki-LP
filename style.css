@@ -5,6 +5,17 @@
 	border: 0px;
 }
 
+a, a:visited {
+	/* リンクの色 */
+	color: black;
+	/* テキストのアンダーバー */
+	text-decoration: none;
+}
+
+a:hover {
+	color: gray;
+}
+
 /*header*/
 header {
 	justify-content: space-between;
