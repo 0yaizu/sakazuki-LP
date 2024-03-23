@@ -1,81 +1,143 @@
-/* body */
+/* Global styles and resets */
 * {
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
 }
 
-/*header*/
+body {
+    font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+/* Header styles, combining both snippets for a cohesive look */
 header {
-	justify-content: space-between;
-	display: flex;
-	box-shadow: 0px 5px 5px 0px gray;
-}
-header .logo {
-	padding: 10px;
-	height: 75px;
-	width: auto;
-}
-header ul {
-	margin: auto 30px auto 0px;
-	display: flex;
-}
-header li {
-	list-style-type: none;
-	font-size: 18px;
-	margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 5px 0px gray;
+    align-items: center;
+    padding: 10px;
 }
 
-/* contact */
+.header-logo {
+    height: 75px;
+    width: auto; /* Adjusted for better scaling */
+}
+
+header ul {
+    display: flex;
+    margin-right: 30px;
+}
+
+header li {
+    list-style-type: none;
+    font-size: 18px;
+    margin: 0 15px;
+    color: white; /* Assuming a light text color for the header */
+}
+
+/* Banner and main section styles from the first snippet */
+.banner {
+    width: 100%;
+    height: 400px;
+    padding: 20px 0;
+    background-image: url('image/background.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Contact form styles enhanced for better UX */
 #contact {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
 
 #contact label p {
-	font-size: 18px;
+    font-size: 18px;
 }
 
 #contact .name {
-	display: flex;
-	justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
 }
-#contact p{
-	margin: 20px 0px 5px 0px;
+
+#contact p {
+    margin: 20px 0 5px;
 }
-#contact input {
-	box-sizing: border-box;
- 	vertical-align: top;
-	width: 100%;
-	height: 42px;
-	background: #ffffff;
-	border: 2px solid #999999;
-	border-radius : 4px;
-	padding: 0 10px;
-	font-size: 18px;
-	color: #333333;
-	letter-spacing: .1em;
+
+#contact input, #contact .submit {
+    width: 100%;
+    height: 42px;
+    background: #ffffff;
+    border: 2px solid #999999;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px; /* Added for spacing between inputs */
 }
-#contact .family_name, .first_name {
-	max-width: 200px;
+
+#contact .family_name, #contact .first_name {
+    max-width: 200px;
 }
+
 #contact .family_name {
-	margin-right: 50px;
+    margin-right: 20px; /* Adjusted for better alignment */
 }
+
 #contact .submit {
-	background:rgb(50, 50, 133);
-	color: white;
-	margin-top: 40px;
-	max-width: 80px;
+    background: rgb(50, 50, 133);
+    color: white;
+    margin-top: 20px;
+    max-width: 100px; /* Adjusted for better visibility */
+    cursor: pointer; /* Indicates the button is clickable */
 }
+
 #contact input:focus {
-  border-color  : #7a9dda;                 /* 枠線色     */
-  background    : rgba(102, 102, 255, 0.20);  /* 背景色     */
-  outline       : 0;
+    border-color: #7a9dda;
+    background: rgba(102, 102, 255, 0.2);
+    outline: none; /* Improved focus state for better accessibility */
 }
- /* --- IEの入力エリア右側×消し -------------------------*/
-#contact input::-ms-clear {
-  display     : none;                      /* ×を消す   */
+
+/* Responsive design adjustments */
+@media screen and (max-width: 1024px) {
+    /* Adjustments for tablets and below */
+    .banner, #contact .submit, header li, .header-logo {
+        padding: 10px 0;
+        width: 250px; /* Adjusted for smaller screens */
+    }
+
+    header li {
+        margin: 0 10px; /* Reduced spacing for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    header {
+        flex-direction: column;
+    }
+
+    .banner {
+        height: 300px; /* Reduced height for smaller screens */
+    }
+
+    #contact .name {
+        flex-direction: column;
+    }
+
+    #contact .family_name {
+        margin-right: 0;
+        margin-bottom: 10px; /* Added space between name inputs */
+    }
 }
