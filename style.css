@@ -1,8 +1,18 @@
-*{
-    padding: 0px;
-    border: 0px;
-    margin: 0px;
+/* all */
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
 }
+
+/* body */
+body {
+	margin: 0;
+	font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro";
+	color: #333;
+	background: #fff;
+}
+  
 a, a:visited {
 	/* リンクの色 */
 	color: #d3d3d3;
@@ -13,6 +23,204 @@ a, a:visited {
 a:hover {
 	color: black;
 }
+
+/*header*/
+header {
+	justify-content: space-between;
+	display: flex;
+	box-shadow: 0px 5px 5px 0px gray;
+}
+header .logo {
+	padding: 10px;
+	height: 75px;
+	width: auto;
+}
+header ul {
+	margin: auto 30px auto 0px;
+	display: flex;
+}
+header li {
+	list-style-type: none;
+	font-size: 18px;
+	margin: 15px;
+}
+
+/* contact */
+#contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+#contact label p {
+	font-size: 18px;
+}
+
+#contact .name {
+	display: flex;
+	justify-content: flex-start;
+}
+#contact p{
+	margin: 20px 0px 5px 0px;
+}
+#contact input {
+	box-sizing: border-box;
+ 	vertical-align: top;
+	width: 100%;
+	height: 42px;
+	background: #ffffff;
+	border: 2px solid #999999;
+	border-radius : 4px;
+	padding: 0 10px;
+	font-size: 18px;
+	color: #333333;
+	letter-spacing: .1em;
+}
+#contact .family_name, .first_name {
+	max-width: 200px;
+}
+#contact .family_name {
+	margin-right: 50px;
+}
+#contact .submit {
+	background:rgb(50, 50, 133);
+	color: white;
+	margin-top: 40px;
+	max-width: 80px;
+}
+#contact input:focus {
+  border-color  : #7a9dda;                 /* 枠線色     */
+  background    : rgba(102, 102, 255, 0.20);  /* 背景色     */
+  outline       : 0;
+}
+ /* --- IEの入力エリア右側×消し -------------------------*/
+#contact input::-ms-clear {
+  display     : none;                      /* ×を消す   */
+}
+
+/* main */
+main .banner {
+	width: 100%;
+	height: 400px;
+	padding: 20px 0;
+	background-image: url('image/background.png');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+}
+
+main .logo-container {
+	width: 300px;
+	margin: 0 auto 20px;
+}
+
+main .logo {
+	width: 100%;
+	height: auto;
+}
+
+main h1 {
+	font-size: 2em;
+	padding: 0;
+	margin: 20px 0;
+}
+
+main .inner {
+	width: 90%;
+	margin: 0 auto;
+}
+
+main section {
+	margin-bottom: 50px;
+}
+
+main h2 {
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+main h2 span {
+	font-size: 0.7em;
+	display: block;
+}
+
+main .list {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+main .list::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+main .list a {
+	color: #e8e4df;
+}
+
+main .list h4 {
+	margin-bottom: 20px;
+	font-size: 1.25em;
+}
+
+main .list p {
+	margin-bottom: 20px;
+}
+
+main .list figure,
+.list video {
+	max-width: 45%; /* 画像と動画の最大幅を調整 */
+	margin: 0 
+	2.5%; /* 画像と動画の周りの余白を調整 */
+	align-self: center; /* Flexboxで中央揃えにする */
+}
+
+main .list figure img,
+.list video img {
+	max-width: 100%; /* 画像がfigureの幅に合わせて調整されるようにする */
+	height: auto; /* 画像の縦横比を保持する */
+}
+
+main .list .text {
+	width: 45%; /* テキストブロックの幅 */
+	padding: 1em; /* 内側の余白 */
+	text-align: left; /* テキストを左揃えに */
+}
+
+/* 追加のスタイリングが必要な場合はここにコードを挿入 */
+
+/* 画像が大きすぎる問題に対応 */
+@media screen and (max-width: 1024px) {
+	.list figure,
+	.list video {
+		max-width: 35%; /* 画像の最大幅をデスクトップより小さな画面で縮小 */
+	}
+}
+
+main .image-container {
+			display: flex;
+			justify-content: center; /* 水平方向の中央揃え */
+			align-items: center; /* 垂直方向の中央揃え */
+}
+	
+main img {
+			max-width: 90%;
+			max-height: 450px;
+}
+
 footer {
     background-color: #696969;
     padding: 10px;
@@ -39,6 +247,6 @@ footer ul {
 footer li {
     padding: 3px 20px;
 }
-li+ li {
+footer li+ li {
     border-left: 2px solid #333;
 }
